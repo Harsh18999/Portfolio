@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <header>
+        <nav class="nav">
+          <a href="/" class="logo"> <span class="highlighted"> H</span>arsh</a>
+  
+          <div class="nav-links">
+            <a href="#home" class="nav-item nav-item-active">Home</a>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#services" class="nav-item">Services</a>
+            <a href="#projects" class="nav-item">projects</a>
+            <a href="#contact" class="nav-item">contact</a>
+          </div>
+  
+          <div class="toggler">
+            <span class="line"></span><span class="line"></span
+            ><span class="line"></span>
+          </div>
+        </nav>
+      </header>
+      <section class="hero container" id="home">
+        <div class="hero-info">
+         <h1 class="title">Harsh <span class="highlighted">Kumar</span></h1>
+         <p class="hero-description">Data Science</p>
+         <a href="#services" class="btn hero-btn">Services</a>
+       </div>
+ 
+       <div class="hero-img">
+         <img src="{{ url_for('static', filename='support_gif.gif') }}" alt="Oliver Queen" />
+       </div>
+      </section>
+      <section class="about container" id="about">
+        <div class="about-img">
+          <img src="{{ url_for('static', filename='hr-22.gif') }}" alt="Oliver Queen" />
+        </div>
+  
+        <div class="about-info">
+          <h2 class="secondery-title">About Me</h2>
+  
+          <p class="description">
+            Hello! I'm a dedicated and passionate Data Science student with a solid 
+            foundation in various data-centric technologies and methodologies. My journey
+            in the field of data science has equipped me with a comprehensive skill
+            set that I am eager to apply and expand upon.
+          </p>
+  
+          <p class="description">
+            I am deeply fascinated by the power of data and its ability to tell stories 
+            and drive decisions. Whether it's uncovering hidden patterns, predicting future 
+            trends, or solving complex problems, I find immense satisfaction in transforming 
+            raw data into meaningful insights.
+          </p>
+  
+          <p class="description">
+            My goal is to continuously learn and grow in the field of data science. I aspire 
+            to work on challenging projects that not only hone my skills but also contribute to 
+            making impactful decisions. I am particularly interested in areas such as machine learning
+            , artificial intelligence, and big data analytics.
+          </p>
+  
+          <a href="#" class="btn btn-secondery">More</a>
+        </div>
+      </section>
+      <div class="services container" id="services">
+        <div class="services-header">
+          <h2 class="secondery-title">Services</h2>
+        </div>
+  
+        <div class="grid services-grid">
+          <div class="grid-item services-item">
+            <i class="fa-solid fa-computer"></i>
+            <h3>Data Analytics</h3>
+            <p class="description">
+                Comprehensive data analysis, where we will explore and visualize large datasets to uncover significant trends.
+            </p>
+          </div>
+          <div class="grid-item services-item">
+            <i class="fa-solid fa-meteor"></i>
+  
+            <h3>Machine learning Models</h3>
+            <p class="description">
+                Develope a machine learning model to predict, demonstrating my capability in model building and evaluation.
+            </p>
+          </div>
+          <div class="grid-item services-item">
+            <i class="fa-solid fa-pen-nib"></i>
+            <h3>Time Series Analysis</h3>
+            <p class="description">
+                Identifying and modeling trends in time series data to make forecasts.
+            </p>
+          </div>
+        </div>
+      </div>
+      <section class="projects container" id="projects">
+        <div class="projects-header">
+          <h2 class="secondery-title">Projects</h2>
+  
+          <div class="projects-tab">
+            <button class="projects-tab-btn projects-tab-btn-active" id="all">
+              All
+            </button>
+            <button class="projects-tab-btn" id="design">Data Analytics</button>
+            <button class="projects-tab-btn" id="seo">Machine learning</button>
+            <button class="projects-tab-btn" id="ui-ux">Time Series Analysis</button>
+          </div>
+        </div>
+  
+        <div class="grid projects-grid">
+          <div class="grid-item projects-item all design">
+            <img src="{{ url_for('static', filename='Project1.png') }}" alt="" />
+          </div>
+          <div class="grid-item projects-item all design">
+            <img src="./images/project-2.png" alt="" />
+          </div>
+          <div class="grid-item projects-item all seo">
+            <img src="./images/project-3.png" alt="" />
+          </div>
+          <div class="grid-item projects-item all seo">
+            <img src="./images/project-4.png" alt="" />
+          </div>
+          <div class="grid-item projects-item all ui-ux">
+            <img src="./images/project-5.png" alt="" />
+          </div>
+          <div class="grid-item projects-item all ui-ux">
+            <img src="./images/project-6.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="container contact" id="contact">
+        <div class="contact-info">
+          <h2 class="secondery-title">Contact</h2>
+          <div class="info-container">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-info-data">
+                <h3>Address</h3>
+                <p>Near Allahabad Medical Assosiation, Prayagraj, Uttar Pradesh 211001  </p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-info-data">
+                <h3>Email</h3>
+                <p>kumarh18999@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="contact-info-data">
+                <h3>Phone</h3>
+                <p>333-423-889</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form>
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Email" />
+            <textarea
+              name="message"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+            <button class="btn submit-btn">Send Message</button>
+          </form>
+        </div>
+      </section>
+  
+          <footer class="footer">
+        <p>&copy; 2024 Harsh Kumar All Right Reserved</p>
+      </footer>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
