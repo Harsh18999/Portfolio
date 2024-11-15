@@ -38,11 +38,12 @@
         <div class="hero-info">
          <h1 class="title">Harsh <span class="highlighted">Kumar</span></h1>
          <p class="hero-description">Data Science Student</p>
+         <a href="https://www.linkedin.com/in/harsh-kumar-885181297" class="btn hero-btn">Linkedin Profile</a>
          <a href="#services" class="btn hero-btn">Learning Doamains</a>
        </div>
  
-       <div class="hero-img">
-         <img src="{{ url_for('static', filename='support_gif.gif') }}" alt="Oliver Queen" />
+       <div > 
+         <img src="{{ url_for('static', filename='My-photo.jpg') }}" style=" border-radius: 1.5%; box-shadow: 0 0 10px rgb(42, 40, 40);" alt="my-git" />
        </div>
       </section>
       <section class="about container" id="about">
@@ -112,34 +113,25 @@
           <h2 class="secondery-title">Projects</h2>
   
           <div class="projects-tab">
-            <button class="projects-tab-btn projects-tab-btn-active" id="all">
-              All
-            </button>
-            <button class="projects-tab-btn" id="design">Data Analytics</button>
-            <button class="projects-tab-btn" id="seo">Machine learning</button>
-            <button class="projects-tab-btn" id="ui-ux">Artificial Intelligence</button>
+            <button class="projects-tab-btn projects-tab-btn-active" id="all">All</button>
+            <button class="projects-tab-btn" id="backend">Beckend Development</button>
+            <button class="projects-tab-btn" id="data-analytics">Data Analytics & Case Studies</button>
+            <button class="projects-tab-btn" id="Machine-learning">Machine learning & Artificial Intelligence</button>
           </div>
         </div>
   
         <div class="grid projects-grid">
-          <div class="grid-item projects-item all design">
-            <img src="{{ url_for('static', filename='Home.png') }}" alt="" />
-          </div>
-          <div class="grid-item projects-item all design">
-            <img src="{{ url_for('static', filename='Dashboard.png') }}" alt="" />
-          </div>
-          <div class="grid-item projects-item all seo">
-            <img src="./images/project-3.png" alt="" />
-          </div>
-          <div class="grid-item projects-item all seo">
-            <img src="./images/project-4.png" alt="" />
-          </div>
-          <div class="grid-item projects-item all ui-ux">
-            <img src="./images/project-5.png" alt="" />
-          </div>
-          <div class="grid-item projects-item all ui-ux">
-            <img src="./images/project-6.png" alt="" />
-          </div>
+          {% for project in projects %}
+            <div class="grid-item projects-item all {{ project.category }}">
+              <a href="{{ project.link }}">
+                <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}">
+              </a>
+              <div class="project-details">
+                <h4>{{ project.title }}</h4>
+                <p>{{ project.description }}</p>
+              </div>
+            </div>
+          {% endfor %}
         </div>
       </section>
       <section class="container contact" id="contact">
