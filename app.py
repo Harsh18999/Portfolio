@@ -22,7 +22,7 @@ projects = [
     {
        "title": "Esophegal Cancer Case Study",
         "description": "Esophageal cancer case study, cleaning, and preprocessing to prepare a robust dataset. Leveraging machine learning techniques, developed a predictive model that achieved accuracy of 99.87%, demonstrating significant potential in early detection and diagnosis of esophageal cancer",
-        "image": "esophegeal-case-study.png",
+        "image": "Esophegeal-case-study.png",
         "link": "",
         "category": "data-analytics"
     }
