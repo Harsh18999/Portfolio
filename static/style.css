@@ -4,10 +4,10 @@
   }
   
   :root {
-    --primary: rgba(197, 211, 232, 0.8);
-    --secondery: #1c1847;
-    --accent: #0cb8c2;
-    --text: #fff;
+    --primary: #FBFBFB;
+    --secondery: #C6E7FF;
+    --accent: #FFDDAE;
+    --text: #D4F6FF;
   }
   
   html {
