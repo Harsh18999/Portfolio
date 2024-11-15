@@ -4,12 +4,12 @@
   }
   
   :root {
-    --primary: #FBFBFB;
-    --secondery: #C6E7FF;
-    --accent: #FFDDAE;
-    --text: #D4F6FF;
+    --primary: #818181;
+    --secondery: #444242;
+    --accent: #78c2e2;
+    --text: #fff6f6;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
@@ -131,9 +131,9 @@
   }
   
   .hero-img {
-    padding-top: 2rem;
+   filter: drop-shadow();
   }
-  
+
   .hero-info {
     text-align: center;
     padding-top: 3rem;
@@ -457,3 +457,7 @@
       font-size: 1.5rem;
     }
   }
+
+
+
+
